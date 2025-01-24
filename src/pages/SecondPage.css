@@ -1,0 +1,193 @@
+/* Main container for the second page */
+.second-page {
+    background-color: #412525;
+    color: white;
+    font-family: 'Joan', sans-serif;
+    padding: 50px;
+    text-align: center;
+    z-index: 1;
+  }
+
+  /* Title styling */
+  .second-page-title {
+    font-size: 3rem;
+    color: #FFD285;
+    margin-bottom: 20px;
+  }
+  
+
+  /* Quote styling */
+  .second-page-text {
+    font-size: 1.7rem;
+    line-height: 1.8;
+    margin: 0 auto 40px auto;
+    width: 70%;
+    color: #f0e5d8;
+  }
+  
+  /* Content container for layout */
+  .content-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 20px;
+  }
+  
+
+  .main-image img {
+    width: 30rem;
+    height: auto;
+    border-radius: 15px;
+    position: relative;
+    left: 0.5rem;
+  }
+  
+
+  /* Features container */
+.features {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+  }
+  
+  /* Individual feature items */
+  .feature-item {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+  }
+  
+  /* Image on the left */
+  .feature-image-left {
+    width: 15rem; 
+    height: 15rem; 
+    aspect-ratio: 1 / 1; /* Ensures the image stays square */
+    border-radius: 50%;
+    object-fit: cover;
+    margin-right: 2rem;
+  }
+
+  .feature-image-right {
+  width: 15rem; 
+  height: 15rem; 
+  border-radius: 50%;
+  object-fit: cover;
+  margin-left: 2rem; /* Adjusted spacing */
+}
+
+/* Text on the right */
+.feature-text-right {
+  text-align: left;
+  flex: 1;
+  font-size: 1.2rem; /* Scaled text size */
+}
+
+/* Text on the left */
+.feature-text-left {
+  text-align: right;
+  flex: 1;
+  font-size: 1.2rem; /* Scaled text size */
+}
+  
+.feature-item {
+  display: flex;
+  align-items: center;
+  gap: 2rem; /* Consistent spacing between items */
+}
+
+  /* General text styling */
+  .feature-item h3 {
+    font-size: 2.4rem;
+    color: #FFD285;
+    margin-bottom: 10px;
+    text-align: auto;
+  }
+  
+  .feature-item p {
+    font-size: 1.6rem;
+    color: #f0e5d8;
+    line-height: 1.6;
+  }
+  
+
+
+
+/* Highlighted quote box */
+.quote-highlight {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 20px auto 40px auto;
+  padding: 20px 0;
+  box-sizing: border-box;
+  max-width: 1007.5px;
+  border-radius: 0.3rem;
+}
+
+/* Top line (full width) */
+.quote-highlight::before {
+  content: "";
+  display: block;
+  width: 100%; 
+  border-top: 0.3rem solid #CF880E; 
+  margin-bottom: 20px;
+  border-radius: 0.3rem;
+}
+
+/* Bottom line (shorter width) */
+.quote-highlight::after {
+  content: "";
+  display: block;
+  width: 50%; 
+  border-top: 0.3rem solid #CF880E;
+  margin-top: 20px;
+  border-radius: 0.3rem;
+}
+
+/* Text styling */
+.second-page-text {
+  font-size: 1.8rem;
+  line-height: 1.8;
+  color: #f0e5d8;
+  text-align: center;
+  margin: 0;
+  width: 90%;
+}
+
+
+
+  
+  /* Responsive layout */
+  @media (max-width: 768px) {
+    .content-container {
+      flex-direction: column;
+      align-items: center;
+    }
+  
+
+    .main-image img {
+      display: none;
+    }
+  
+    .features {
+      width: 100%;
+      gap: 10px;
+    }
+  
+
+    .feature-item {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .feature-text-left, .feature-text-right {
+    text-align: center;
+    margin: 0;
+  }
+
+  .feature-image-left, .feature-image-right {
+    margin: 0;
+  }
+  }
+  

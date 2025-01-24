@@ -1,0 +1,76 @@
+.farm{
+  background-color: #412525;
+  color: white;
+  font-family: 'Joan', sans-serif;
+  padding: 50px;
+  text-align: center;
+  z-index: 1;
+  margin-top: 20px;
+
+}
+
+/* Title styling */
+.farm-title {
+  font-size: 3rem;
+  color: #FFD285;
+  margin-bottom: 20px;
+}
+
+/* Center-aligned text above the box */
+.centered-text {
+  font-size: 1.5rem; 
+  line-height: 1.6;
+  margin: 0 auto 20px auto; 
+  width: 70%; 
+  color: #f0e5d8; 
+  text-align: center; 
+}
+
+/* Quote styling */
+.farm-text {
+  font-size: 1.7rem;
+  line-height: 1.8;
+  margin: 0 auto 40px auto;
+  width: 70%;
+  color: #f0e5d8;
+}
+
+/* Dark brown box */
+.dark-brown-box {
+  background-color: #5C4033;
+  color: #f0e5d8;
+  padding: 30px;
+  margin: 10px 0;
+  width: 100%;
+  box-sizing: border-box;
+  display: flex; 
+  align-items: center; 
+}
+
+/* Image inside the box */
+.box-image {
+  width: 600px; 
+  height: 400px; 
+  object-fit: cover; 
+  border-radius: 20px;
+  margin-right: 20px; 
+}
+
+/* Content inside the box */
+.box-content {
+  flex: 1; 
+  text-align: left; 
+}
+
+/* Title inside the box */
+.box-title {
+  font-size: 2rem;
+  margin-bottom: 10px;
+  color: #FFD285;
+}
+
+/* Text inside the box */
+.box-text {
+  font-size: 1.4rem;
+  line-height: 1.6;
+}

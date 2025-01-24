@@ -1,0 +1,86 @@
+/* Menu.css */
+body {
+  font-family: 'Arial', sans-serif;
+  background-color: #f8f5f2; /* Soft background for contrast */
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  color: #5C4033; /* Main text color */
+}
+
+.vegan-menu {
+  margin-top: 60px;
+}
+.vegan-menu-title {
+  color: #5C4033;
+  text-align: center;
+  margin-top: 20px;
+}
+
+.vegan-menu-description {
+  color: #5C4033;
+  text-align: center;
+  margin: 0 20px 20px;
+  font-size: 1.1rem;
+}
+
+.vegan-menu-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+  padding: 20px;
+  flex-grow: 1; /* Ensures the container expands to take up available space */
+}
+
+.vegan-menu-card {
+  background-color: #fff;
+  border: 1px solid #e0dcd7;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  width: 300px;
+  overflow: hidden;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.vegan-menu-card:hover {
+  transform: scale(1.05);
+  box-shadow: 0 6px 10px rgba(0, 0, 0, 0.15);
+}
+
+.vegan-menu-card img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  border-bottom: 3px solid #5C4033;
+}
+
+.vegan-menu-card-title {
+  margin: 15px 0 10px;
+  font-size: 1.5rem;
+  color: #5C4033;
+}
+
+.vegan-menu-card-description {
+  margin: 0 15px 15px;
+  font-size: 1rem;
+  line-height: 1.5;
+  color: #5C4033;
+}
+
+.vegan-menu-img{
+  width: 2rem;
+  height: 2rem;
+  object-fit: cover; 
+}
+/* Footer styling */
+.vegan-menu-footer {
+  text-align: center;
+  padding: 10px;
+  font-size: 0.9rem;
+  background-color: #5C4033;
+  color: #fff;
+  margin-top: auto; /* Pushes the footer to the bottom */
+}

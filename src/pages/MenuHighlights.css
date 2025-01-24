@@ -1,0 +1,97 @@
+/* General Section Styling */
+.menu-section {
+  padding: 5rem 0;
+  background-color: #412525;
+  color: white;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+
+.menu-title {
+  font-size: 2.5rem;
+  font-weight: bold;
+  text-align: center;
+  color: #d4a762;
+  margin-bottom: 2rem;
+}
+
+/* Grid Layout */
+.menu-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+}
+
+/* Card Styles */
+.menu-card {
+  background-color: #2a1810;
+  border-radius: 0.5rem;
+  overflow: hidden;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.4);
+  display: flex;
+  flex-direction: row;
+}
+
+.image-container {
+  flex: 1;
+}
+
+.menu-image {
+  width: 100%;
+  height: auto;
+  position: relative;
+  object-fit: cover;
+  display: block; 
+  margin: 0 auto; 
+}
+
+.menu-card-content {
+  flex: 1;
+  padding: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.menu-item-name {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #d4a762;
+  margin-bottom: 1rem;
+}
+
+.menu-item-description {
+  font-size: 0.9rem;
+  color: #cfcfcf;
+  margin-bottom: 1rem;
+}
+
+.menu-item-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.menu-item-price {
+  font-size: 1.2rem;
+  font-weight: bold;
+}
+
+.menu-button {
+  background-color: #d4a762;
+  color: white;
+  border: none;
+  padding: 0.5rem 1rem;
+  border-radius: 0.5rem;
+  font-size: 0.9rem;
+  font-weight: bold;
+  transition: background-color 0.3s ease-in-out;
+}
+
+.menu-button:hover {
+  background-color: #c39652;
+}

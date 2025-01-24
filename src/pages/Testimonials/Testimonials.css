@@ -1,0 +1,52 @@
+
+
+.testimonial-page {
+    background-color: #412525;
+    color: white;
+    font-family: 'Joan', sans-serif;
+    padding: 50px;
+    text-align: center;
+  }
+
+  .line1 {
+    width: 60%; /* Adjust length of the line */
+    height: 6px; /* Thickness of the line */
+    background-color: orange; /* Line color */
+    margin: 10px auto; /* Adds spacing and centers the line */
+    border-radius: 3px; /* Rounds the ends (half of the height) */
+
+  }
+
+  .line2 {
+    width: 40%; /* Adjust length of the line */
+    height: 6px; /* Thickness of the line */
+    background-color: orange; /* Line color */
+    margin: 10px auto; /* Adds spacing and centers the line */
+    border-radius: 3px; /* Rounds the ends (half of the height) */
+
+  }
+  
+  .quote-container {
+    text-align: center;
+    font-size: 20px; /* Adjust text size */
+    color: #fff; /* Text color */
+    opacity: 0.9; /* Make the text slightly transparent */
+  }
+  
+  .quote-icon {
+    color: rgb(255, 255, 255);
+    font-size: 5rem; /* Make the quote icon bigger */
+    margin-right: 10px; /* Space between the icon and the text */
+    opacity: 0.2; /* Add transparency to the icon */
+  }
+  
+  .testimonials-text {
+    font-size: 3rem;
+    line-height: 3.3rem
+  }
+
+  .testimonial-page-title {
+    font-size: 3rem;
+    color: #FFD285;
+    margin-bottom: 2rem;
+  }

@@ -1,0 +1,104 @@
+ .prep-process {
+    background-color: #412525;
+    color: white;
+    font-family: 'Joan', sans-serif;
+    padding: 50px;
+    text-align: center;
+    z-index: 1;
+    margin-top: 20px;
+}
+
+.prep-process-titlee {
+    font-size: 3rem;
+    color: #FFD285;
+    margin-bottom: 20px;
+}
+
+.prep-process-textt {
+    font-size: 1.7rem;
+    line-height: 1.8;
+    margin: 0 auto 40px auto;
+    width: 70%;
+    color: #f0e5d8;
+}
+
+/* 
+.dark-brown-boxx:nth-child(odd) {
+    flex-direction: row-reverse; 
+}
+
+
+.box-titlee {
+    font-size: 2rem;
+    margin-bottom: 10px;
+    color: #FFD285;
+}
+
+.box-textt {
+    font-size: 1.4rem;
+    line-height: 1.6;
+    margin-left: 20px;
+    flex: 1;
+}
+
+.prep-process img {
+    border-radius: 10%;
+    width: 300px;
+    height: auto;
+    object-fit: cover;
+    border: 5px solid #FFD285;
+    margin: 0 20px;
+}
+ */
+  
+  /* Center-aligned text above the box */
+  .centered-textt {
+    font-size: 1.5rem; 
+    line-height: 1.6;
+    margin: 0 auto 20px auto; 
+    width: 70%; 
+    color: #f0e5d8; 
+    text-align: center; 
+  }
+  
+  
+  /* Dark brown box */
+  .dark-brown-boxx {
+    background-color: #5C4033;
+    color: #f0e5d8;
+    padding: 30px;
+    margin: 10px 0;
+    width: 100%;
+    box-sizing: border-box;
+    display: flex; 
+    align-items: center; 
+  }
+  
+  /* Image inside the box */
+  .box-imagee {
+    width: 300px; 
+    height: 200px; 
+    object-fit: cover; 
+    margin-right: 20px; 
+    border-radius: 15%;
+    border: 5px solid #FFD285; /* Added border and color */
+  }
+  
+  /* Content inside the box */
+  .box-contentt {
+    flex: 1; 
+    text-align: left; 
+  }
+  
+  /* Title inside the box */
+  .box-titlee {
+    font-size: 2rem;
+    margin-bottom: 10px;
+    color: #FFD285;
+  }
+  
+  /* Text inside the box */
+  .box-textt {
+    font-size: 1.4rem;
+    line-height: 1.6;
+  }
