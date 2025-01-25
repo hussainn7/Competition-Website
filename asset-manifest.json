@@ -1,13 +1,11 @@
 {
   "files": {
-    "main.css": "/Competition-Website/static/css/main.c1f14e32.css",
-    "main.js": "/Competition-Website/static/js/main.633b3bc7.js",
-    "index.html": "/Competition-Website/index.html",
-    "main.c1f14e32.css.map": "/Competition-Website/static/css/main.c1f14e32.css.map",
-    "main.633b3bc7.js.map": "/Competition-Website/static/js/main.633b3bc7.js.map"
+    "main.css": "/Competition-Website/static/css/main.7990cc38.css",
+    "main.js": "/Competition-Website/static/js/main.914ebd1b.js",
+    "index.html": "/Competition-Website/index.html"
   },
   "entrypoints": [
-    "static/css/main.c1f14e32.css",
-    "static/js/main.633b3bc7.js"
+    "static/css/main.7990cc38.css",
+    "static/js/main.914ebd1b.js"
   ]
 }
