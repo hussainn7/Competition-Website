@@ -59,7 +59,7 @@ const Navbar = () => {
     <nav className={getNavClass()}>
       {/* Logo section with link */}
       <Link to="/">
-        <img className="logo-nav" src="/logo.png" alt="Logo" />
+        <img className="logo-nav" src={process.env.PUBLIC_URL + '/logo.png'} alt="Logo" />
       </Link>
 
       {/* Menu Toggle */}

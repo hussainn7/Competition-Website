@@ -13,7 +13,7 @@ const Hero = () => {
       <div className="hero-section">
 
         <div className="content">
-          <img className="greek-circle" src="/greek-round.png" alt="circle" />
+          <img className="greek-circle" src={process.env.PUBLIC_URL + "/greek-round.png"} alt="circle" />
           <div className="hero-text">
             <h1>
               <span className="span-hero">Rooted in </span>
@@ -38,10 +38,10 @@ const Hero = () => {
         </div>
 
         <div className="floating-images">
-          <img className="falafel-one" src="/falafel.png" alt="Falafel" />
-          <img className="falafel-two" src="/falafel.png" alt="Falafel" />
-          <img className="falafel-three" src="/falafel.png" alt="Falafel" />
-          <img className="falafel-four" src="/falafel.png" alt="Falafel" />
+          <img className="falafel-one" src={process.env.PUBLIC_URL + "/falafel.png"} alt="Falafel" />
+          <img className="falafel-two" src={process.env.PUBLIC_URL + "/falafel.png"} alt="Falafel" />
+          <img className="falafel-three" src={process.env.PUBLIC_URL + "/falafel.png"} alt="Falafel" />
+          <img className="falafel-four" src={process.env.PUBLIC_URL + "/falafel.png"} alt="Falafel" />
         </div>
       </div>
 
