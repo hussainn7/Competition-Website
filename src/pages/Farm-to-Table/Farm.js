@@ -11,7 +11,7 @@ const farm = () => {
       </p>
 
       <div className="dark-brown-box">
-        <img src='./anubhav (2).png' className="box-image" />
+        <img src='anubhav (2).png' className="box-image" />
         <div className="box-content">
           <h2 className="box-title">Partnering with Local Farmers</h2>
           <p className="box-text">
@@ -21,7 +21,7 @@ const farm = () => {
       </div>
 
       <div className="dark-brown-box">
-        <img src='/anubhav (1).png' className="box-image" />
+        <img src='anubhav (1).png' className="box-image" />
         <div className="box-content">
           <h2 className="box-title">Emphasizing Organic and Seasonal Produce</h2>
           <p className="box-text">
@@ -31,7 +31,7 @@ const farm = () => {
       </div>
 
       <div className="dark-brown-box">
-        <img src='/anubhav (3).png' className="box-image" />
+        <img src='anubhav (3).png' className="box-image" />
         <div className="box-content">
           <h2 className="box-title">Ensuring Fresh Delivery of Ingredients</h2>
           <p className="box-text">
@@ -41,7 +41,7 @@ const farm = () => {
       </div>
 
       <div className="dark-brown-box">
-        <img src='/anubhav (4).png' className="box-image" />
+        <img src='anubhav (4).png' className="box-image" />
         <div className="box-content">
           <h2 className="box-title">Transparent Ingredient Sourcing</h2>
           <p className="box-text">

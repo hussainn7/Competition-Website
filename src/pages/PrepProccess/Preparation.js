@@ -11,7 +11,7 @@ const Preparation = () => {
       </p>
 
       <div className="dark-brown-boxx">
-        <img src='./farm1.png' className="box-imagee" />
+        <img src='farm1.png' className="box-imagee" />
         <div className="box-contentt">
           <h2 className="box-titlee">Partnering with Local Farmers</h2>
           <p className="box-textt">
@@ -21,7 +21,7 @@ const Preparation = () => {
       </div>
 
       <div className="dark-brown-boxx">
-        <img src='/farm2.png' className="box-imagee" />
+        <img src='farm2.png' className="box-imagee" />
         <div className="box-contentt">
           <h2 className="box-titlee">Emphasizing Organic and Seasonal Produce</h2>
           <p className="box-textt">
@@ -31,7 +31,7 @@ const Preparation = () => {
       </div>
 
       <div className="dark-brown-boxx">
-        <img src='/farm3.png' className="box-imagee" />
+        <img src='farm3.png' className="box-imagee" />
         <div className="box-contentt">
           <h2 className="box-titlee">Ensuring Fresh Delivery of Ingredients</h2>
           <p className="box-textt">
@@ -41,7 +41,7 @@ const Preparation = () => {
       </div>
 
       <div className="dark-brown-boxx">
-        <img src='/farm4.png' className="box-imagee" />
+        <img src='farm4.png' className="box-imagee" />
         <div className="box-contentt">
           <h2 className="box-titlee">Transparent Ingredient Sourcing</h2>
           <p className="box-textt">

@@ -1,14 +1,10 @@
 import React, { useState, useEffect } from 'react';
-import { useLocation } from 'react-router-dom';
-import { Link } from 'react-router-dom'
+import { useLocation, Link } from 'react-router-dom'; 
 import { FaShoppingCart } from 'react-icons/fa';
-// import { useCart } from '.src/pages/Cart/CartContext.js'; // Adjust the path based on your structure
 import './Navbar.css';
-
 
 const Navbar = () => {
   const location = useLocation();
-  // const { cart } = useCart(); // Access the cart from context
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
 
@@ -61,44 +57,47 @@ const Navbar = () => {
 
   return (
     <nav className={getNavClass()}>
-      <a href="/">
-    <img className="logo-nav" src="../logo.png" alt="Logo" />
-</a>
+      {/* Logo section with link */}
+      <Link to="/">
+        <img className="logo-nav" src="/logo.png" alt="Logo" />
+      </Link>
+
+      {/* Menu Toggle */}
       <span className="menu-toggle" onClick={toggleMenu}>
         ☰
       </span>
-      <ul className={`nav-links ${isMenuOpen ? 'show' : ''}`}>
-        <li><a href="/preparation">Processes</a></li>
-        <li><a href="/farm">Farm-To-Table</a></li>
-        <li><a href="/Sustainability">Sustainability</a></li>
-        <li><a href="/menu">Menu</a></li>
-        <li><a href="/reservation">Reservation</a></li>
-        <li>
 
-        </li>
-        <li>
-          {/* <a href="/cart">Cart ({cart.length})</a> Display cart count */}
-        </li>
+      {/* Main Navigation Links */}
+      <ul className={`nav-links ${isMenuOpen ? 'show' : ''}`}>
+        <li><Link to="/preparation">Processes</Link></li>
+        <li><Link to="/farm">Farm-To-Table</Link></li>
+        <li><Link to="/sustainability">Sustainability</Link></li>
+        <li><Link to="/menu">Menu</Link></li>
+        <li><Link to="/reservation">Reservation</Link></li>
+        <li><Link to="/references">References</Link></li>
       </ul>
+
+      {/* Sliding Menu for Mobile */}
       <div className={`sliding-menu ${isMenuOpen ? 'open' : ''}`}>
         <span className="close-btn" onClick={toggleMenu}>
           ✖
         </span>
         <ul>
-          <li><a href="/preparation" onClick={toggleMenu}>Processes</a></li>
-          <li><a href="/farm" onClick={toggleMenu}>Farm-To-Table</a></li>
-          <li><a href="/sustainability" onClick={toggleMenu}>Sustainability</a></li>
-          <li><a href="/menu" onClick={toggleMenu}>Menu</a></li>
-          <li><a href="/reservation" onClick={toggleMenu}>Reservation</a></li>
+          <li><Link to="/preparation" onClick={toggleMenu}>Processes</Link></li>
+          <li><Link to="/farm" onClick={toggleMenu}>Farm-To-Table</Link></li>
+          <li><Link to="/sustainability" onClick={toggleMenu}>Sustainability</Link></li>
+          <li><Link to="/menu" onClick={toggleMenu}>Menu</Link></li>
+          <li><Link to="/reservation" onClick={toggleMenu}>Reservation</Link></li>
         </ul>
       </div>
 
+      {/* Cart Icon with Link */}
       <div className='cart'>
-      <Link to="/cart" className="cart-icon">
-  <FaShoppingCart size={32} />
-</Link> 
-    </div>
-</nav>
+        <Link to="/cart" className="cart-icon">
+          <FaShoppingCart size={32} />
+        </Link>
+      </div>
+    </nav>
   );
 };
 

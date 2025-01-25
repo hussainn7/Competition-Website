@@ -14,7 +14,7 @@ const Footer = () => {
             <h3 className="footer-title">Contact</h3>
             <div className="footer-contact">
               <p className="footer-item">
-                <FontAwesomeIcon icon={faLocationDot} className="footer-icon" /> WHITE NIGGA
+                <FontAwesomeIcon icon={faLocationDot} className="footer-icon" /> The US of A
               </p>
               <p className="footer-item">
                 <FontAwesomeIcon icon={faPhone} className="footer-icon" /> (555) 123-4567

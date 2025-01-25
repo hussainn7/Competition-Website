@@ -1,0 +1,13 @@
+.references-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 90vh; /* Full height of the viewport */
+  }
+  
+  /* Style the image */
+  .references {
+    width: 450px; /* Adjust size as needed */
+    height: auto; /* Maintain aspect ratio */
+  }
+  

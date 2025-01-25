@@ -8,7 +8,7 @@ const menuItems = [
     name: "Ultra Vegie Bowl",
     description:
       "Crispy falafel served on fresh greens with tomatoes, cucumbers, and olives.",
-    image: "/dish.png",
+    image: "dish.png",
     price: "12.99",
   },
   {
@@ -16,7 +16,7 @@ const menuItems = [
     name: "Veggie Bowl",
     description:
       "Crispy falafel served on fresh greens with tomatoes, cucumbers, and olives.",
-    image: "/dish2.png",
+    image: "dish2.png",
     price: "10.99",
   },
 ];

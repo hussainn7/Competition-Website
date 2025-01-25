@@ -17,13 +17,13 @@ const SecondPage = () => {
   <div className="content-container">
     {/* Left Image */}
     <div className="main-image">
-      <img src="/4.png" alt="Mediterranean Dish" />
+      <img src="4.png" alt="Mediterranean Dish" />
     </div>
 
     <div className="features">
   {/* Feature 1: Image on the left, text on the right */}
   <div className="feature-item">
-    <img className="feature-image-left" src="/3.png" alt="Fresh Ingredients" />
+    <img className="feature-image-left" src="3.png" alt="Fresh Ingredients" />
     <div className="feature-text-right">
       <h3>Freshness</h3>
       <p>Our dishes are made with the finest, freshest ingredients for vibrant, delicious meals.</p>
@@ -36,12 +36,12 @@ const SecondPage = () => {
       <h3>Authentic</h3>
       <p>Sahara stays true to Mediterranean traditions with time-honored recipes and flavors.</p>
     </div>
-    <img className="feature-image-right" src="/2.png" alt="Authentic Dish" />
+    <img className="feature-image-right" src="2.png" alt="Authentic Dish" />
   </div>
 
   {/* Feature 3: Image on the left, text on the right */}
   <div className="feature-item">
-    <img className="feature-image-left" src="/1.png" alt="Mediterranean History" />
+    <img className="feature-image-left" src="1.png" alt="Mediterranean History" />
     <div className="feature-text-right">
       <h3>History</h3>
       <p>Inspired by Mediterranean culture, Sahara reflects the region’s rich culinary heritage.</p>

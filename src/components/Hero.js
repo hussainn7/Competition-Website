@@ -1,5 +1,4 @@
 import React, { useEffect, useState } from "react";
-import confetti from "canvas-confetti";
 import SecondPage from "../pages/SecondPage";
 import MenuHighlights from "../pages/MenuHighlights";
 import Testimonials from "../pages/Testimonials/Testimonials";
@@ -14,7 +13,7 @@ const Hero = () => {
       <div className="hero-section">
 
         <div className="content">
-          <img className="greek-circle" src="greek-round.png" alt="circle" />
+          <img className="greek-circle" src="/greek-round.png" alt="circle" />
           <div className="hero-text">
             <h1>
               <span className="span-hero">Rooted in </span>
