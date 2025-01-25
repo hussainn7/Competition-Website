@@ -2,12 +2,15 @@
   command = "CI= npm run build"
   publish = "build"
   base = "main"
+<<<<<<< HEAD
 
 [build.environment]
   NODE_VERSION = "18"
   NPM_VERSION = "9"
+=======
+>>>>>>> 466403cfe5abd00e07dbc3bc18b50f12c8ee0839
 
 [[redirects]]
   from = "/*"
   to = "/index.html"
-  status = 200 
+  status = 200
