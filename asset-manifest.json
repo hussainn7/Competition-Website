@@ -1,11 +1,11 @@
 {
   "files": {
-    "main.css": "/Competition-Website/static/css/main.3c1b380a.css",
+    "main.css": "/Competition-Website/static/css/main.737b2ab6.css",
     "main.js": "/Competition-Website/static/js/main.9d4eb3ab.js",
     "index.html": "/Competition-Website/index.html"
   },
   "entrypoints": [
-    "static/css/main.3c1b380a.css",
+    "static/css/main.737b2ab6.css",
     "static/js/main.9d4eb3ab.js"
   ]
 }
