@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { useLocation, Link } from 'react-router-dom'; 
 import { FaShoppingCart } from 'react-icons/fa';
+import { motion, AnimatePresence } from 'framer-motion';
 import './Navbar.css';
 
 const Navbar = () => {
@@ -10,93 +11,126 @@ const Navbar = () => {
 
   const toggleMenu = () => {
     setIsMenuOpen(!isMenuOpen);
+    document.body.style.overflow = !isMenuOpen ? 'hidden' : 'unset';
   };
 
   const handleScroll = () => {
-    if (window.scrollY > 50) {
-      setIsScrolled(true);
-    } else {
-      setIsScrolled(false);
-    }
+    setIsScrolled(window.scrollY > 50);
   };
 
   useEffect(() => {
     window.addEventListener('scroll', handleScroll);
-    return () => {
-      window.removeEventListener('scroll', handleScroll);
-    };
+    return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
-  const getNavClass = () => {
-    let baseClass = '';
-    switch (location.pathname) {
-      case '/registration':
-        baseClass = 'nav-registration';
-        break;
-      case '/conferences':
-        baseClass = 'nav-conferences';
-        break;
-      case '/photodb':
-        baseClass = 'nav-workshops';
-        break;
-      case '/volunteer':
-        baseClass = 'nav-volunteer';
-        break;
-      case '/events':
-        baseClass = 'nav-events';
-        break;
-      case '/aed':
-        baseClass = 'nav-aed';
-        break;
-      default:
-        baseClass = 'nav-default';
-        break;
+  const menuVariants = {
+    closed: {
+      x: "100%",
+      transition: {
+        type: "spring",
+        stiffness: 400,
+        damping: 40
+      }
+    },
+    open: {
+      x: 0,
+      transition: {
+        type: "spring",
+        stiffness: 400,
+        damping: 40
+      }
     }
-    return `${baseClass} ${isScrolled ? 'scrolled' : ''}`;
   };
 
+  const linkVariants = {
+    closed: { x: 50, opacity: 0 },
+    open: i => ({
+      x: 0,
+      opacity: 1,
+      transition: {
+        delay: i * 0.1,
+        type: "spring",
+        stiffness: 300,
+        damping: 30
+      }
+    })
+  };
+
+  const navLinks = [
+    { to: "/preparation", text: "Processes" },
+    { to: "/farm", text: "Farm-To-Table" },
+    { to: "/sustainability", text: "Sustainability" },
+    { to: "/menu", text: "Menu" },
+    { to: "/reservation", text: "Reservation" },
+    { to: "/references", text: "References" }
+  ];
+
   return (
-    <nav className={getNavClass()}>
-      {/* Logo section with link */}
-      <Link to="/">
+    <nav className={`navbar ${isScrolled ? 'scrolled' : ''}`}>
+      <Link to="/" className="logo-container">
         <img className="logo-nav" src={process.env.PUBLIC_URL + '/logo.png'} alt="Logo" />
       </Link>
 
-      {/* Menu Toggle */}
-      <span className="menu-toggle" onClick={toggleMenu}>
-        ☰
-      </span>
-
-      {/* Main Navigation Links */}
-      <ul className={`nav-links ${isMenuOpen ? 'show' : ''}`}>
-        <li><Link to="/preparation">Processes</Link></li>
-        <li><Link to="/farm">Farm-To-Table</Link></li>
-        <li><Link to="/sustainability">Sustainability</Link></li>
-        <li><Link to="/menu">Menu</Link></li>
-        <li><Link to="/reservation">Reservation</Link></li>
-        <li><Link to="/references">References</Link></li>
+      {/* Desktop Navigation */}
+      <ul className="nav-links desktop-nav">
+        {navLinks.map((link) => (
+          <li key={link.to}>
+            <Link to={link.to}>{link.text}</Link>
+          </li>
+        ))}
       </ul>
 
-      {/* Sliding Menu for Mobile */}
-      <div className={`sliding-menu ${isMenuOpen ? 'open' : ''}`}>
-        <span className="close-btn" onClick={toggleMenu}>
-          ✖
-        </span>
-        <ul>
-          <li><Link to="/preparation" onClick={toggleMenu}>Processes</Link></li>
-          <li><Link to="/farm" onClick={toggleMenu}>Farm-To-Table</Link></li>
-          <li><Link to="/sustainability" onClick={toggleMenu}>Sustainability</Link></li>
-          <li><Link to="/menu" onClick={toggleMenu}>Menu</Link></li>
-          <li><Link to="/reservation" onClick={toggleMenu}>Reservation</Link></li>
-        </ul>
-      </div>
+      {/* Mobile Menu Button */}
+      <button 
+        className="menu-toggle" 
+        onClick={toggleMenu}
+        aria-label="Toggle menu"
+      >
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
 
-      {/* Cart Icon with Link */}
-      <div className='cart'>
-        <Link to="/cart" className="cart-icon">
-          <FaShoppingCart size={32} />
-        </Link>
-      </div>
+      {/* Cart Icon */}
+      <Link to="/cart" className="cart-icon-container">
+        <FaShoppingCart size={24} />
+      </Link>
+
+      {/* Mobile Menu */}
+      <AnimatePresence>
+        {isMenuOpen && (
+          <motion.div 
+            className="mobile-menu"
+            initial="closed"
+            animate="open"
+            exit="closed"
+            variants={menuVariants}
+          >
+            <div className="mobile-menu-header">
+              <img className="mobile-logo" src={process.env.PUBLIC_URL + '/logo.png'} alt="Logo" />
+              <button className="close-menu" onClick={toggleMenu}>×</button>
+            </div>
+
+            <ul className="mobile-nav-links">
+              {navLinks.map((link, i) => (
+                <motion.li 
+                  key={link.to}
+                  custom={i}
+                  variants={linkVariants}
+                >
+                  <Link 
+                    to={link.to} 
+                    onClick={toggleMenu}
+                    className={location.pathname === link.to ? 'active' : ''}
+                  >
+                    {link.text}
+                  </Link>
+                </motion.li>
+              ))}
+            </ul>
+          </motion.div>
+        )}
+      </AnimatePresence>
     </nav>
   );
 };

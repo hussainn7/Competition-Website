@@ -3,48 +3,55 @@ import "./Menu.css";
 import { ShopCont } from "./context/shop-context";
 
 const Menu = () => {
-  const dishes = [
+  const DISHES = [
     {
       id: 1,
-      name: "Vegan Buddha Bowl",
-      description: "A nutritious bowl of quinoa, chickpeas, avocado, and vegetables.",
-      image: "https://images.unsplash.com/photo-1675092789086-4bd2b93ffc69?q=80&w=3489&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-      price: 12.99,
+      name: "Falafel Bites",
+      description: "Crispy chickpea fritters served with tahini dipping sauce.",
+      image: "https://images.unsplash.com/photo-1593001874117-c99c800e3eb8?q=80&w=2940&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+      price: 6.99,
     },
     {
       id: 2,
-      name: "Avocado Toast",
-      description: "Toasted sourdough topped with creamy avocado and chili flakes.",
-      image: "https://images.unsplash.com/photo-1675092789086-4bd2b93ffc69?q=80&w=3489&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-      price: 8.99,
+      name: "Falafel Bowl",
+      description: "Healthy dinner bowls loaded with delicious falafel and Mediterranean flavor.",
+      image: "https://images.unsplash.com/photo-1701688596783-231b3764ef67?q=80&w=2787&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+      price: 12.99,
     },
     {
       id: 3,
-      name: "Vegan Sushi Rolls",
-      description: "Fresh rolls filled with cucumber, avocado, and carrots.",
-      image: "https://images.unsplash.com/photo-1675092789086-4bd2b93ffc69?q=80&w=3489&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-      price: 14.99,
+      name: "Hummus Platter",
+      description: "Creamy chickpea dip drizzled with olive oil, served with warm pita bread and fresh veggies.",
+      image: "https://images.unsplash.com/photo-1711469137073-f1790108f46d?q=80&w=2835&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+      price: 7.99,
     },
     {
       id: 4,
-      name: "Grilled Vegetable Platter",
-      description: "Seasonal vegetables grilled to perfection with a drizzle of olive oil.",
-      image: "https://images.unsplash.com/photo-1675092789086-4bd2b93ffc69?q=80&w=3489&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+      name: "Halloumi Fries",
+      description: "Crispy fried halloumi sticks served with a tangy yogurt dip.",
+      image: "https://images.unsplash.com/photo-1689151132093-e76db98a9d89?q=80&w=2940&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
       price: 10.99,
     },
     {
       id: 5,
-      name: "Lentil Soup",
-      description: "A hearty and flavorful soup made with red lentils and spices.",
-      image: "https://images.unsplash.com/photo-1675092789086-4bd2b93ffc69?q=80&w=3489&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+      name: "Halva Cheesecake",
+      description: "A modern twist on traditional halva with a creamy cheesecake base.",
+      image: "https://images.unsplash.com/photo-1591194782115-0335fc0e93a1?w=800&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTF8fGhhbHZhJTIwY2hlZXNjYWtlfGVufDB8fDB8fHww",
       price: 7.99,
     },
     {
       id: 6,
-      name: "Vegan Pancakes",
-      description: "Fluffy pancakes served with maple syrup and fresh berries.",
-      image: "https://images.unsplash.com/photo-1675092789086-4bd2b93ffc69?q=80&w=3489&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+      name: "Loukoumades",
+      description: "Greek-style honey donuts sprinkled with cinnamon.",
+      image: "https://plus.unsplash.com/premium_photo-1730973702380-e0f523710e01?q=80&w=2942&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
       price: 9.99,
+    },
+    {
+      id: 7,
+      name: "Turkish Coffee",
+      description: "Coffee brewed in traditional Turkish style.",
+      image: "https://images.unsplash.com/photo-1506778020041-0ea35027d019?w=800&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8dHVya2lzaCUyMGNvZmZlZXxlbnwwfHwwfHx8MA%3D%3D",
+      price: 5.99,
     },
   ];
 
@@ -55,7 +62,7 @@ const Menu = () => {
       <h1 className="vegan-menu-title">Our Menu</h1>
       <p className="vegan-menu-description">Discover our authentic Mediterranean dishes.</p>
       <div className="vegan-menu-container">
-        {dishes.map((dish) => {
+        {DISHES.map((dish) => {
           const cartItemAmount = cartItem[dish.id] || 0;
           return (
             <div className="vegan-menu-card" key={dish.id}>

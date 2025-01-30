@@ -10,4 +10,14 @@
     width: 450px; /* Adjust size as needed */
     height: auto; /* Maintain aspect ratio */
   }
-  
+  a {
+    color: #FFD285;
+    text-decoration: none; 
+    font-weight: 500; 
+  }
+  .useful-links{
+    line-height: 1rem;
+  }
+  a:hover {
+      text-decoration: underline; 
+  }

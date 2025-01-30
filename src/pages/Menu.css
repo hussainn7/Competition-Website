@@ -1,86 +1,190 @@
 /* Menu.css */
 body {
   font-family: 'Arial', sans-serif;
-  background-color: #f8f5f2; /* Soft background for contrast */
+  background-color: #39474F;
   margin: 0;
   padding: 0;
   display: flex;
   flex-direction: column;
   min-height: 100vh;
-  color: #5C4033; /* Main text color */
+  color: #ffffff;
 }
 
 .vegan-menu {
-  margin-top: 60px;
+  margin-top: 120px;
+  padding: 0 20px;
 }
+
 .vegan-menu-title {
-  color: #5C4033;
+  color: #FFD285;
   text-align: center;
   margin-top: 20px;
+  font-size: 3rem;
+  font-weight: 700;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
 }
 
 .vegan-menu-description {
-  color: #5C4033;
+  color: #FFD285;
   text-align: center;
-  margin: 0 20px 20px;
-  font-size: 1.1rem;
+  margin: 0 20px 40px;
+  font-size: 1.2rem;
+  font-weight: 300;
 }
 
 .vegan-menu-container {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 20px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 30px;
   padding: 20px;
-  flex-grow: 1; /* Ensures the container expands to take up available space */
+  max-width: 1400px;
+  margin: 0 auto;
 }
 
 .vegan-menu-card {
-  background-color: #fff;
-  border: 1px solid #e0dcd7;
-  border-radius: 10px;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-  width: 300px;
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 15px;
   overflow: hidden;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  transition: all 0.3s ease;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
 }
 
 .vegan-menu-card:hover {
-  transform: scale(1.05);
-  box-shadow: 0 6px 10px rgba(0, 0, 0, 0.15);
+  transform: translateY(-10px);
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.3);
 }
 
 .vegan-menu-card img {
   width: 100%;
-  height: 200px;
+  height: 220px;
   object-fit: cover;
-  border-bottom: 3px solid #5C4033;
+  border-bottom: 2px solid rgba(255, 255, 255, 0.1);
+  transition: transform 0.3s ease;
+}
+
+.vegan-menu-card:hover img {
+  transform: scale(1.05);
 }
 
 .vegan-menu-card-title {
-  margin: 15px 0 10px;
-  font-size: 1.5rem;
-  color: #5C4033;
+  margin: 20px 20px 10px;
+  font-size: 1.6rem;
+  color: #ffffff;
+  font-weight: 600;
+  text-align: center;
 }
 
 .vegan-menu-card-description {
-  margin: 0 15px 15px;
+  margin: 0 20px 15px;
   font-size: 1rem;
-  line-height: 1.5;
-  color: #5C4033;
+  line-height: 1.6;
+  color: rgba(255, 255, 255, 0.8);
+  flex-grow: 1;
+  text-align: center;
 }
 
-.vegan-menu-img{
-  width: 2rem;
-  height: 2rem;
-  object-fit: cover; 
+.vegan-menu-price {
+  font-size: 1.5rem;
+  color: #FFD285;
+  font-weight: 600;
+  margin: 10px 20px;
+  text-align: center;
 }
+
+/* Simplified Add to Cart Button Styling */
+.addToCartBttn {
+  margin: 15px auto 20px;
+  padding: 12px 25px;
+  font-size: 1rem;
+  font-weight: 500;
+  color: #ffffff;
+  background: #CF880E;
+  border: none;
+  border-radius: 25px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: auto;
+  min-width: 150px;
+  gap: 8px;
+}
+
+.addToCartBttn:hover {
+  background: #FFD285;
+  transform: translateY(-2px);
+  box-shadow: 0 5px 15px rgba(207, 136, 14, 0.4);
+  color: #39474F;
+}
+
+.addToCartBttn:active {
+  transform: translateY(0);
+}
+
+/* Cart count styling */
+.addToCartBttn > span {
+  background: rgba(255, 255, 255, 0.2);
+  padding: 2px 8px;
+  border-radius: 12px;
+  font-size: 0.9rem;
+}
+
+.addToCartBttn:hover > span {
+  background: rgba(0, 0, 0, 0.1);
+}
+
 /* Footer styling */
 .vegan-menu-footer {
   text-align: center;
-  padding: 10px;
+  padding: 20px;
   font-size: 0.9rem;
-  background-color: #5C4033;
-  color: #fff;
-  margin-top: auto; /* Pushes the footer to the bottom */
+  background: rgba(255, 255, 255, 0.1);
+  color: #ffffff;
+  margin-top: auto;
+  backdrop-filter: blur(10px);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .vegan-menu {
+    margin-top: 100px;
+  }
+
+  .vegan-menu-title {
+    font-size: 2.5rem;
+  }
+
+  .vegan-menu-description {
+    font-size: 1.1rem;
+    margin-bottom: 30px;
+  }
+
+  .vegan-menu-container {
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 15px;
+    padding: 15px;
+  }
+
+  .vegan-menu-card {
+    margin: 0;
+  }
+
+  .vegan-menu-card-title {
+    font-size: 1.4rem;
+  }
+
+  .vegan-menu-price {
+    font-size: 1.3rem;
+  }
+
+  .addToCartBttn {
+    padding: 10px 20px;
+    font-size: 0.9rem;
+  }
 }

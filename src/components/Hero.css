@@ -64,6 +64,7 @@
   h1 .highlight {
     color: #CF880E; 
     font-weight: 600; 
+    z-index: 5;
   }
 
   p {
@@ -72,7 +73,6 @@
     line-height: 1.5;
     color: white;
     margin-top: 1rem;
-    margin-bottom: 2rem;
     z-index: 5;
   }
   
@@ -137,7 +137,7 @@
     left: 10%;
     transform: translateY(-50%);
     max-width: 600px;
-    z-index: 1;
+    z-index: 5;
   }
   
   .content h1 {
@@ -147,6 +147,7 @@
   
   .content .highlight {
     color: rgba(207, 136, 14, 0.8);
+    z-index: 5;
   }
 
   .hero-p-text {
@@ -217,8 +218,8 @@
     bottom: 5rem;
     opacity: 84%;
     transform: rotate(-20deg) translate(-90%, 20%);
-    right: -15rem;
-  
+    right: -9rem;
+    z-index: 1;  
   }
   
   .falafel-two {
@@ -228,6 +229,7 @@
     position: relative;
     transform: rotate(-20deg) translate(15%, 15%); 
     right: -5rem;
+    z-index: 2;
   }
   
   .falafel-three {
@@ -238,7 +240,7 @@
     right: -5rem;
     top: -3rem;
     transform: rotate(15deg) translate(-55%, -15%); 
-    z-index: 1; 
+    z-index: 3; 
     
   }
   
@@ -249,7 +251,7 @@
     opacity: 84%;
     transform: rotate(30deg) translate(-10%, -75%);
     left: -10rem;
-    z-index: 2;
+    z-index: 4;
   }
   
 
